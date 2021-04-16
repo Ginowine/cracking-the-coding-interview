@@ -1,17 +1,19 @@
 package BigOExamples;
 
 //What is the runtime of the below code?
-
+//
 //This will take 0 (N) time. The fact that we iterate through the array twice doesn't matter.
 public class Example1 {
     public static void foo(int[] array){
         int sum = 0;
         int product = 1;
 
-        for (int i = 0; i < array.length; i++){
-            sum += array[i];
+        // enhance for loop (for each)
+        for (int j : array) {
+            sum += j;
         }
 
+        // normal for loop
         for (int i = 0; i < array.length; i++){
             product *= array[i];
         }
