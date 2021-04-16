@@ -19,6 +19,9 @@ public class ArrayListAndLinkedList {
         list1.add("C");
         list1.add("D");
 
+//        System.out.println(list);
+//        System.out.println(list1);
+
         for (String s : list) {
             System.out.print(s + " ");
         }
