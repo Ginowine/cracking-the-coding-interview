@@ -11,7 +11,6 @@ public class RecursiveBinarySearch {
         int result = binarySearch(numbers, 8, start, end);
         System.out.println(result);
     }
-
     public static int binarySearch(int[] input, int target, int start, int end){
         if (start >= end){
             return  -1;
