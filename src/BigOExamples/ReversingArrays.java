@@ -1,7 +1,6 @@
 package BigOExamples;
 
 public class ReversingArrays {
-
     static void reverseArray(int[] array){
         for (int i = 0; i < array.length/2; i++){
             int other = array.length - i - 1;
