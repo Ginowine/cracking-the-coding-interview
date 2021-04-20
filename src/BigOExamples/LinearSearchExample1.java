@@ -14,6 +14,8 @@ public class LinearSearchExample1 {
         }
 
     }
+
+    // this method loops through every elements in the array
     public static int doLinearSearch(int[] array, int target){
         if (array.length == 0){
             return -1;
