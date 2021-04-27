@@ -1,9 +1,10 @@
 package DataStructures;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class WeightedGraphImplementation {
+ class Graph{
     static class Node{
         int value, weight;
         Node(int value, int weight)  {
@@ -12,19 +13,9 @@ public class WeightedGraphImplementation {
         }
     };
 
-    //class to store edges of the weighted graph
-    class Edge {
-        int src, dest, weight;
-        Edge(int src, int dest, int weight) {
-            this.src = src;
-            this.dest = dest;
-            this.weight = weight;
-        }
-    }
-
     List<List<Node>> adj_list = new ArrayList<>();
 
-    public WeightedGraphImplementation(List<Edge> edges){
+    public Graph(List<Edge> edges){
         // adjacency list memory allocation
         for (int i = 0; i < edges.size(); i++){
             adj_list.add(i, new ArrayList<>());
@@ -37,7 +28,7 @@ public class WeightedGraphImplementation {
     }
 
     // print adjacency list for the graph
-    public static void printGraph(WeightedGraphImplementation weightedGraphImplementation){
+    public static void printGraph(Graph weightedGraphImplementation){
         int src_vertex = 0;
         int list_size = weightedGraphImplementation.adj_list.size();
 
@@ -53,3 +44,27 @@ public class WeightedGraphImplementation {
         }
     }
 }
+
+//class to store edges of the weighted graph
+ class Edge {
+    int src, dest, weight;
+    Edge(int src, int dest, int weight) {
+        this.src = src;
+        this.dest = dest;
+        this.weight = weight;
+    }
+}
+
+public class WeightedGraphImplementation {
+    // define edges of the graph
+    List<Edge> edges = Arrays.asList(new Edge(0, 1, 2),new Edge(0, 2, 4),
+            new Edge(1, 2, 4),new Edge(2, 0, 5), new Edge(2, 1, 4),
+            new Edge(3, 2, 3), new Edge(4, 5, 1),new Edge(5, 4, 3));
+
+    // call graph class Constructor to construct a graph
+    Graph graph = new Graph(edges);
+
+    // print the graph as an adjacency list
+    Graph
+}
+
